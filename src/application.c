@@ -321,6 +321,7 @@ void window_keypress_handler(GtkWidget *widget, GdkEventKey *event,
         clipboard_copy_drawing_area_to_selection(state);
         break;
       case GDK_KEY_s:
+        commit_state(state);
         save_state_to_file_or_folder(state, NULL);
         break;
       case GDK_KEY_b:
